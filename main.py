@@ -1,16 +1,41 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from datetime import datetime
+import json
+import pytz
+import requests
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def requestHTML(url):
+    # html request
+    request = requests.get(url, timeout=5)
+    htmlContent = str(request.content)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # write the html code to a txt document
+    htmlFile = open("htmlContent.txt", "w")
+    htmlFile.write(htmlContent)
+    htmlFile.close()
+
+    # return the contents
+    return htmlContent
+
+
+def runStockCheck():
+    # body yet to be complete
+
+    return
+
+
+def inStock():
+    inStock = False
+
+    # body yet to be complete
+
+    return inStock
+
+
+def main():
+    # body yet to be complete
+
+    url = input("Hello World!")
+
+
+main()
